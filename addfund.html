@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Add Funds - yourstardom</title>
+<meta name="description" content="">
+<meta type="keywords" content="">
+<meta name="csrf-token" content="8A2Lrq9mVHlR9pHyf7SkWzf5W8myC7IRGF2QvUdj">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v1641537348">
+<link rel="canonical" href="https://yourstardom.in/funds">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+	--font-family: 'Maven Pro', serif !important;
+	--primary: #39a0ff; --primary-light: rgba(12, 98, 228, 0.21);
+	--primary-dark: #0c62e2; --secondary: #7987a1;
+	--secondary-dark: #6d7686; --secondary-light: rgba(109, 118, 134, 0.212);
+    --box-shadow: 0 3px 10px 3e55780b; --body-background: #f4f7fc;
+	
+	--background-image: ;
+	--card-background: #ffffff; --navbar-background: #fff;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/panelq/static-app@0.98/css/style.min.css">
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/featherIcons.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/css/select2.min.css">
+</head>
+<body class="">
+<header class="container navbar navbar-header navbar-header-fixed">
+<div class="inner-navbar">
+<span id="mainMenuOpen" class="burger-menu"><i data-feather="list"></i></span>
+<div class="navbar-brand">
+<div class="pq-logo">
+<img src="/logo.png?v1641537348">
+</div>
+</div>
+<div id="navbarMenu" class="navbar-menu-wrapper">
+<div class="navbar-menu-header">
+<div id="mobile-logo"></div>
+<a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+</div>
+<ul class="nav navbar-menu">
+<li class="nav-item"><a href="https://yourstardom.in/order" class="nav-link"><i data-feather="shopping-cart"></i>New Order</a></li>
+<li class="nav-item"><a href="https://yourstardom.in/services" class="nav-link"><i data-feather="layers"></i>Services</a></li>
+<li class="nav-item"><a href="https://yourstardom.in/funds" class="nav-link"><i data-feather="plus-square"></i>Add Funds</a></li>
+<li class="nav-item with-sub">
+<a href="" class="nav-link"><i data-feather="package"></i>Logs</a>
+<ul class="navbar-menu-sub">
+<li class="nav-sub-item"><a href="https://yourstardom.in/orders" class="nav-sub-link"><i data-feather="calendar"></i>Order Logs</a></li>
+<li class="nav-sub-item"><a href="https://yourstardom.in/transactions" class="nav-sub-link"><i data-feather="file-text"></i>Transactions</a></li>
+<li class="nav-sub-item"><a href="https://yourstardom.in/fund-logs" class="nav-sub-link"><i data-feather="archive"></i>Fund Logs</a></li>
+<li class="nav-sub-item"><a href="https://yourstardom.in/service-logs" class="nav-sub-link"><i data-feather="list"></i>Service Logs</a></li>
+</ul>
+</li>
+<li class="nav-item"><a href="https://yourstardom.in/support" class="nav-link"><i data-feather="life-buoy"></i>Support</a></li>
+<li class="nav-item with-sub">
+<a href="" class="nav-link"><i data-feather="hash"></i>More</a>
+<ul class="navbar-menu-sub">
+<li class="nav-sub-item">
+<a href="https://yourstardom.in/api" class="nav-sub-link"><i data-feather="book-open"></i>API Docs</a>
+<a href="https://yourstardom.in/faq" class="nav-sub-link"><i data-feather="info"></i>F.A.Q.</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="navbar-right">
+<a href="https://yourstardom.in/support" class="bell" title="No new message">
+<i class="text-muted" data-feather="bell"></i>
+</a>
+<a class="d-flex ml-2 fw-500 text-dark px-2 py-1 bg-primary-light rounded" href="https://yourstardom.in/funds" title="Add Funds" data-placement="left">
+₹ 0.00 <i class="my-1 ml-1 d-xl-block d-none" data-feather="plus" height="14" width="14"></i>
+</a>
+<div class="ml-2 dropdown dropdown-profile">
+<a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+<div class="text-uppercase bg-primary-light avatar avatar-sm rounded-circle">
+a
+</div>
+</a>
+<div class="dropdown-menu dropdown-menu-right text-13">
+<h5 class="fw-500 mb-1 text-capitalize">ankit choudhary</h5>
+<span>Rank : <span class="badge badge-info">Newbie</span></span>
+<p class="mb-2 fw-400 text-muted">ankitbhidhasra6@gmail.com</p>
+<a href="https://yourstardom.in/profile" class="ajaxModal fw-500 btn btn-sm btn-primary w-100 mt-1">
+<i class="mr-2" data-feather="settings"></i> Update Profile </a>
+<hr class="my-2">
+<a href="https://yourstardom.in/logout" class="fw-500 btn btn-sm btn-secondary w-100">
+<i class="mr-2" data-feather="log-out"></i> Log out
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="content content-fixed">
+<div class="container">
+<section class="row justify-content-center">
+<div class="card p-3 col-sm-6">
+<h4 class="mb-3">Balance : ₹ 0.00</h4>
+<select id="gateway" class="select2">
+<option value="">Select gateway to add fund</option>
+<option value="mphonepe">PhonePe</option>
+<option value="mpaytm">Paytm</option>
+<option value="payum">Debit/Credit Cards,UPI,Wallets,Netbanking</option>
+<option value="coinpayments">BTC-LTC-BCH-ETH-XRP</option>
+<option value="perfectmoney">Perfect Money</option>
+</select>
+</div>
+</section>
+<section class="row justify-content-center mt-3">
+<div id="gatewayForm" class="card p-3 col-sm-6"></div>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/validate.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@0.98/js/scripts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/select2.min.js"></script>
+<script>
+	$('.select2').select2({ minimumResultsForSearch: Infinity });
+	$('#gateway').on('change', () => {
+		let slug = $('#gateway option:selected').val();
+        if (slug == '') return;
+        $('.loader').addClass('show');
+		$.ajax({
+            async: true,
+			url: `/payment/${slug}`,
+			method: "GET",
+			success: (resposne) => {
+				if (resposne.success) {
+					$('#gatewayForm').html(resposne.data);
+                    $('.loader').removeClass('show');
+				} else toast('danger', resposne.message);
+                $('.loader').removeClass('show');
+			},
+			error: (jqXHR, exception) => {
+				toast('danger', 'Something went wrong.');
+                $('.loader').removeClass('show');
+			}
+		}).then(function() {
+            $('form input:nth-child(2)').focus();
+        });
+	});
+</script>
+</body>
+</html>

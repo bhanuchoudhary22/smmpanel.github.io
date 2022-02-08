@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Dashboard - yourstardom</title>
+<meta name="description" content="">
+<meta type="keywords" content="">
+<meta name="csrf-token" content="wKuuy4QfNdAtHbkBZSFDoLqdhAsLtDcqsLRUrBjL">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v1641537348">
+<link rel="canonical" href="https://yourstardom.in">
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+	--font-family: 'Maven Pro', serif !important;
+	--primary: #39a0ff; --primary-light: rgba(12, 98, 228, 0.21);
+	--primary-dark: #0c62e2; --secondary: #7987a1;
+	--secondary-dark: #6d7686; --secondary-light: rgba(109, 118, 134, 0.212);
+    --box-shadow: 0 3px 10px 3e55780b; --body-background: #f4f7fc;
+	
+	--background-image: ;
+	--card-background: #ffffff; --navbar-background: #fff;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/panelq/static-app@0.98/css/style.min.css">
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/featherIcons.js"></script>
+</head>
+<body class="dashboard">
+<header class="container navbar navbar-header navbar-header-fixed">
+<div class="inner-navbar">
+<span id="mainMenuOpen" class="burger-menu"><i data-feather="list"></i></span>
+<div class="navbar-brand">
+<div class="pq-logo">
+<img src="/logo.png?v1641537348">
+</div>
+</div>
+<div id="navbarMenu" class="navbar-menu-wrapper">
+<div class="navbar-menu-header">
+<div id="mobile-logo"></div>
+<a id="mainMenuClose" href=""><i data-feather="x"></i></a>
+</div>
+<ul class="nav navbar-menu">
+<li class="nav-item"><a href="https://yourstardom.in/order" class="nav-link"><i data-feather="shopping-cart"></i>New Order</a></li>
+<li class="nav-item"><a href="https://yourstardom.in/services" class="nav-link"><i data-feather="layers"></i>Services</a></li>
+<li class="nav-item"><a href="https://yourstardom.in/funds" class="nav-link"><i data-feather="plus-square"></i>Add Funds</a></li>
+<li class="nav-item with-sub">
+<a href="" class="nav-link"><i data-feather="package"></i>Logs</a>
+<ul class="navbar-menu-sub">
+<li class="nav-sub-item"><a href="https://yourstardom.in/orders" class="nav-sub-link"><i data-feather="calendar"></i>Order Logs</a></li>
+<li class="nav-sub-item"><a href="https://yourstardom.in/transactions" class="nav-sub-link"><i data-feather="file-text"></i>Transactions</a></li>
+<li class="nav-sub-item"><a href="https://yourstardom.in/fund-logs" class="nav-sub-link"><i data-feather="archive"></i>Fund Logs</a></li>
+<li class="nav-sub-item"><a href="https://yourstardom.in/service-logs" class="nav-sub-link"><i data-feather="list"></i>Service Logs</a></li>
+</ul>
+</li>
+<li class="nav-item"><a href="https://yourstardom.in/support" class="nav-link"><i data-feather="life-buoy"></i>Support</a></li>
+<li class="nav-item with-sub">
+<a href="" class="nav-link"><i data-feather="hash"></i>More</a>
+<ul class="navbar-menu-sub">
+<li class="nav-sub-item">
+<a href="https://yourstardom.in/api" class="nav-sub-link"><i data-feather="book-open"></i>API Docs</a>
+<a href="https://yourstardom.in/faq" class="nav-sub-link"><i data-feather="info"></i>F.A.Q.</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="navbar-right">
+<a href="https://yourstardom.in/support" class="bell" title="No new message">
+<i class="text-muted" data-feather="bell"></i>
+</a>
+<a class="d-flex ml-2 fw-500 text-dark px-2 py-1 bg-primary-light rounded" href="https://yourstardom.in/funds" title="Add Funds" data-placement="left">
+₹ 0.00 <i class="my-1 ml-1 d-xl-block d-none" data-feather="plus" height="14" width="14"></i>
+</a>
+<div class="ml-2 dropdown dropdown-profile">
+<a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+<div class="text-uppercase bg-primary-light avatar avatar-sm rounded-circle">
+a
+</div>
+</a>
+<div class="dropdown-menu dropdown-menu-right text-13">
+<h5 class="fw-500 mb-1 text-capitalize">ankit choudhary</h5>
+<span>Rank : <span class="badge badge-info">Newbie</span></span>
+<p class="mb-2 fw-400 text-muted">ankitbhidhasra6@gmail.com</p>
+<a href="https://yourstardom.in/profile" class="ajaxModal fw-500 btn btn-sm btn-primary w-100 mt-1">
+<i class="mr-2" data-feather="settings"></i> Update Profile </a>
+<hr class="my-2">
+<a href="https://yourstardom.in/logout" class="fw-500 btn btn-sm btn-secondary w-100">
+<i class="mr-2" data-feather="log-out"></i> Log out
+</a>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="content content-fixed">
+<div class="container">
+<section class="row">
+<div class="col-sm-5 mb-sm-4 mb-3">
+<div class="card">
+<h4 class="px-3 pt-3 mb-n2">Orders <span class="float-right h5 mb-0 mt-2 text-muted">Total: 0</span></h4>
+<div class="p-3 text-center">
+<div id="orders" class="morris"></div>
+</div>
+</div>
+</div>
+<div class="col-sm-7 mb-sm-4 mb-3 d-inline-flex overflow-y">
+<div class="card w-100">
+<h4 class="pl-4 p-3 mb-0">Top Services</h4>
+<div class="table-responsive px-2 pb-1">
+<table class="table table-bordered rounded mb-1">
+<tbody>
+<tr>
+<td class="copy">300</td>
+<td>Instagram Views + Impression [Max: 100M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+</tr>
+<tr>
+<td class="copy">299</td>
+<td>Instagram Views [10M] [INSTANT - 100K/Day]</td>
+</tr>
+<tr>
+<td class="copy">573</td>
+<td>Instagram Followers [Refill: 99 Days] [Max: 500K] [Start Time: 1 Hour] [Speed: 1K/Day] ♻🔥</td>
+</tr>
+<tr>
+<td class="copy">987</td>
+<td>Instagram Likes [ 1k/hour] [ No refill]</td>
+</tr>
+<tr>
+<td class="copy">607</td>
+<td>Instagram Followers [100k] [Auto Refill 30Days] [Real Mixed]</td>
+</tr>
+<tr>
+<td class="copy">298</td>
+<td>Instagram Views [Max: 5M] [Start Time: 0-1 Hour] [Speed: 5M/Day] 💧</td>
+</tr>
+<tr>
+<td class="copy">986</td>
+<td>Instagram Likes [ Less Drop ] [ 50k/day]</td>
+</tr>
+<tr>
+<td class="copy">485</td>
+<td>Instagram Likes - [ Max - 15k ] [ 15k/day - BOT ] INSTANT</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="col-sm-8 mb-3 mb-sm-0 mh-100 d-inline-flex overflow-y">
+<div class="card w-100">
+<div class="d-flex justify-content-between">
+<h4 class="pl-4 p-3 mb-0">Service Logs</h4>
+<a href="https://yourstardom.in/service-logs" class="btn btn-pm my-auto mr-3">Show All</a>
+</div>
+<div class="table-responsive px-2 pb-1">
+<table class="table table-bordered rounded mb-1">
+<thead>
+<tr>
+<th style="min-width: 300px; padding: 0"></th>
+<th style="min-width: 200px; padding: 0"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-left">#2460 | Youtube Views [Speed 10K / Day] [Instant Start] [Refill Lifetime] [100K]</td>
+<td><span class="badge-log badge-primary">Price: $0.822 &gt; $0.833</td>
+</tr>
+<tr>
+<td class="text-left">#2459 | Youtube Views | Max 200k | 0-8 H Start | Non Drop | 10k / Day</td>
+<td><span class="badge-log badge-primary">Price: $0.996 &gt; $1.026</td>
+</tr>
+<tr>
+<td class="text-left">#2458 | Instagram Views + Impression [Max: 10M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+<td><span class="badge-log badge-primary">Price: $0.0586 &gt; $0.0599</td>
+</tr>
+<tr>
+<td class="text-left">#2457 | Instagram Views + Impression [Max: 10M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+<td><span class="badge-log badge-primary">Price: $0.0588 &gt; $0.0586</td>
+</tr>
+<tr>
+<td class="text-left">#2456 | Instagram Views + Impression [Max: 10M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+<td><span class="badge-log badge-primary">Price: $0.0583 &gt; $0.0588</td>
+</tr>
+<tr>
+<td class="text-left">#2455 | Instagram Views + Impression [Max: 10M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+<td><span class="badge-log badge-primary">Price: $0.0582 &gt; $0.0583</td>
+</tr>
+<tr>
+<td class="text-left">#2454 | Instagram Views + Impression [Max: 10M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+<td><span class="badge-log badge-primary">Price: $0.0584 &gt; $0.0582</td>
+</tr>
+<tr>
+<td class="text-left">#2453 | Instagram Views + Impression [Max: 10M] [Start Time: 0-1 Hour] [Speed: 50M/Day] 💧</td>
+<td><span class="badge-log badge-primary">Price: $0.0596 &gt; $0.0584</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="col-sm-4 col">
+<div class="card mb-sm-4 mb-3 w-100">
+<h4 class="pl-4 p-3 mb-0">Funds</h4>
+<div class="px-4">
+<div class="h5 text-muted d-flex justify-content-between">
+Available : <h4 class="mb-0">₹ 0.00</h4>
+</div>
+<div class="h5 text-muted d-flex justify-content-between">
+Spent : <h4 class="mb-0">₹ 0.00</h4>
+</div>
+<hr>
+<div class="h5 text-muted d-flex justify-content-between">
+Transactions : <h4>₹ 0.00</h4>
+</div>
+</div>
+</div>
+<div class="card w-100">
+<div class="d-flex justify-content-between">
+<h4 class="pl-4 p-3 mb-0">Last Message</h4>
+<a href="https://yourstardom.in/support" class="btn btn-pm my-auto mr-3">Support</a>
+</div>
+<div class="no-results py-1 my-0">
+<i data-feather="file" class="small"></i>
+<p>No result found....</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/validate.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@0.98/js/scripts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/raphael.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/panelq/static-app@latest/js/morris.min.js"></script>
+<script>
+var cssProps = getComputedStyle(document.body);
+var ordersData = [];
+new Morris.Donut({
+	element: 'orders',
+	data: Object.keys(ordersData).length == 0 ? [{ label: 'N/A', value: 0.01, color: cssProps.getPropertyValue('--secondary') }] : [
+		{ label: 'Pending', value: ordersData.pending, color: cssProps.getPropertyValue('--secondary') },
+		{ label: 'Processing', value: ordersData.processing, color: cssProps.getPropertyValue('--teal') },
+		{ label: 'Completed', value: ordersData.completed, color: cssProps.getPropertyValue('--primary') },
+		{ label: 'Cancelled', value: ordersData.cancelled, color: cssProps.getPropertyValue('--red') }
+	],
+    formatter: value => value.toFixed()
+});
+</script>
+</body>
+</html>
